@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+}
+
+.mainWindow {
+  position: relative;
+  box-sizing: content-box;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 800px;
+  width: 800px;
+  margin: auto;
+  border-width: 8px;
+  border-style: solid;
+}
+
+.pixel {
+  display: inline-block;
+  width: 2%;
+  height: 2%;
+  /*padding-bottom: 5%;*/
+  float: left;
+  border-style: solid;
+  border-width: thin;
+}
+
+.colorPick{
+  box-sizing: content-box;
+  position: relative;
+  width: 800px;
+  height: 100px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  border-width: 8px;
+  border-style: solid;
+}
+
+.pick{
+
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+  margin: 5px;
+}
+.colors{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 500px;
+  height: 70px;
+  margin:  auto;
+}
+
+.firstColor{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: #f23535;
+}
+
+.secondColor{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: #f1e835;
+}
+
+.thirdColor{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: #6df034;
+}
+
+.fourthColor{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: #33ef7c;
+}
+
+.fithColor{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: #32ccef;
+}
+
+.sixthColor{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: #3254ef;
+}
+
+.seventhColor{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: #6a32ef;
+}
+
+.eightColor{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.ninthColor{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 15px auto;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: white;
+}
