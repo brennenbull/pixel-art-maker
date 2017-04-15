@@ -1,12 +1,12 @@
 var body = document.getElementsByTagName('body')[0];
 var pixelColor = 'black';
 var currentColor =  document.getElementsByClassName('currentColor')[0];
-
+currentColor.style.backgroundColor = pixelColor;
 //Paint---------->>>>>>>
 var mainWindow = document.getElementsByClassName('mainWindow')[0];
-mainWindow.addEventListener('click', changeColor);
+mainWindow.addEventListener('click', brushColor);
 
-function changeColor() {
+function brushColor() {
   pixel = event.target;
   if(pixel.className === 'pixel'){
     pixel.style.backgroundColor = pixelColor;
@@ -24,16 +24,20 @@ function storeColor() {
   currentColor.style.backgroundColor = pixelColor;
 }
 //CustomColor--------------->>>>
+var colorSelectorColor = null
 var colorSelector = document.getElementsByTagName('input')[0];
 var colorSelectorColor = colorSelector.value;
 colorSelector.style.backgroundColor = colorSelectorColor;
-colorSelector.addEventListener('input', changeColor);
-colorSelector.addEventListener('change', function (element){
+
+function customBrushColor() {
   pixelColor = event.target.value;
-  var colorSelectorValue = event.target.value;
+  colorSelectorValue = event.target.value;
   currentColor.style.backgroundColor = colorSelectorValue;
   colorSelector.style.backgroundColor = colorSelectorValue;
-});
+}
+
+colorSelector.addEventListener('input', brushColor);
+colorSelector.addEventListener('change', customBrushColor);
 
 //The Brush Function-------->>>>
 var down = false;
