@@ -23,25 +23,34 @@ function storeColor() {
   pixelColor = colorStyle.backgroundColor;
   currentColor.style.backgroundColor = pixelColor;
 }
+//CustomColor--------------->>>>
+var colorSelector = document.getElementsByTagName('input')[0];
+var colorSelectorColor = colorSelector.value;
+colorSelector.style.backgroundColor = colorSelectorColor;
+colorSelector.addEventListener('input', changeColor);
+colorSelector.addEventListener('change', function (element){
+  pixelColor = event.target.value;
+  var colorSelectorValue = event.target.value;
+  currentColor.style.backgroundColor = colorSelectorValue;
+  colorSelector.style.backgroundColor = colorSelectorValue;
+});
+
 //The Brush Function-------->>>>
 var down = false;
 
 function isDown() {
   down = true;
-  console.log(down);
 }
 
 function ifDown(){
   var target = event.target;
   if(down && target.className === 'pixel'){
     target.style.backgroundColor = pixelColor;
-    console.log(pixelColor);
   }
 }
 
 function isUp() {
   down = false;
-  console.log(down);
 }
 mainWindow.addEventListener('mousedown', isDown);
 mainWindow.addEventListener('mouseover', ifDown);
