@@ -9,6 +9,25 @@
   text-align: center;
 }
 
+.clear{
+  position: fixed;
+  float: left;
+  height: 75px;
+  width: 100px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  left: 100px;
+}
+
+h3 {
+  font-weight: bold;
+  position: relative;
+  font-family: monospace;
+  text-align: center;
+  top: 10px;
+}
+
 .mainWindow {
   position: relative;
   box-sizing: content-box;
@@ -48,7 +67,6 @@
 }
 
 .pick{
-
   font-weight: bold;
   font-family: monospace;
   text-align: center;

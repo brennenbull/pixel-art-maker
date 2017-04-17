@@ -1,7 +1,9 @@
 var body = document.getElementsByTagName('body')[0];
 var pixelColor = 'black';
 var currentColor =  document.getElementsByClassName('currentColor')[0];
+
 currentColor.style.backgroundColor = pixelColor;
+
 //Paint---------->>>>>>>
 var mainWindow = document.getElementsByClassName('mainWindow')[0];
 mainWindow.addEventListener('click', brushColor);
@@ -23,6 +25,7 @@ function storeColor() {
   pixelColor = colorStyle.backgroundColor;
   currentColor.style.backgroundColor = pixelColor;
 }
+
 //CustomColor--------------->>>>
 var colorSelectorColor = null
 var colorSelector = document.getElementsByTagName('input')[0];
@@ -38,6 +41,18 @@ function customBrushColor() {
 
 colorSelector.addEventListener('input', brushColor);
 colorSelector.addEventListener('change', customBrushColor);
+
+//Clear Button------------->>>>
+var clearButton = document.getElementsByClassName('clear')[0];
+
+function clearBackground(){
+  let paintCanvas = document.getElementsByClassName('pixel');
+  for (var i = 0; i < paintCanvas.length; i++) {
+    paintCanvas[i].style.backgroundColor = null
+  }
+}
+
+clearButton.addEventListener('click', clearBackground);
 
 //The Brush Function-------->>>>
 var down = false;
@@ -60,9 +75,7 @@ mainWindow.addEventListener('mousedown', isDown);
 mainWindow.addEventListener('mouseover', ifDown);
 body.addEventListener('mouseup', isUp);
 
-
 //Makes The Board----------->>>>
-
 
 function makePixel(){
   var pixels = document.createElement('div');
@@ -74,6 +87,7 @@ function addPixel (){
   for (var i = 0; i < 2500; i++){
     var pixel = makePixel();
     mainWindow.appendChild(pixel);
+
   }
 }
 
