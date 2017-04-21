@@ -1,7 +1,6 @@
 var body = document.getElementsByTagName('body')[0];
 var pixelColor = 'black';
 var currentColor =  document.getElementsByClassName('currentColor')[0];
-
 currentColor.style.backgroundColor = pixelColor;
 
 //Paint---------->>>>>>>
