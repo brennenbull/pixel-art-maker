@@ -86,7 +86,6 @@ function addPixel (){
   for (var i = 0; i < 2500; i++){
     var pixel = makePixel();
     mainWindow.appendChild(pixel);
-
   }
 }
 
